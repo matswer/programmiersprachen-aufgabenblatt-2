@@ -2,17 +2,22 @@
 #include <GLFW/glfw3.h>
 #include <utility>
 #include <cmath>
+#include "vec2.hpp"
+//#include "circle.hpp"
 
 
 int main(int argc, char* argv[])
 {
   Window win{std::make_pair(800,800)};
+  //Circle kreis;
+
 
   while (!win.should_close()) {
     if (win.get_key(GLFW_KEY_ESCAPE) == GLFW_PRESS) {
       win.close();
     }
 
+    // kreis.draw(window);
     bool left_pressed = win.get_mouse_button(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 
     auto t = win.get_time();
