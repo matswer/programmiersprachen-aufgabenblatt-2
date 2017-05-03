@@ -8,11 +8,30 @@ Vec2::Vec2(float x, float y)
   : x_(x), y_(y)
 {}
 
-// x += y --- x = x + y
+// Additionsoperator
+
 Vec2 & Vec2::operator +=( Vec2 const & v)
 {
   x_ += v.x_;
   y_ += v.y_;
-
+  return *this;
 }
 
+// Substraktionsoperator
+
+Vec2 & Vec2::operator -=( Vec2 const & v)
+{
+  x_ -= v.x_;
+  y_ -= v.y_;
+  return *this;
+}
+
+// Multiplikationsoperator
+
+Vec2 & Vec2::operator *=( float s)
+{
+  x_ *= s;
+  y_ *= s;
+  return *this;
+
+}
