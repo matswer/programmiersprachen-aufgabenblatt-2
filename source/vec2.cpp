@@ -43,3 +43,19 @@ Vec2 & Vec2::operator /=( float s)
   y_ /= s;
   return *this;
 }
+
+// Aditionsoperator
+Vec2 const operator +( Vec2 const & u, Vec2 const & v)
+{
+  Vec2 temp(u);
+  temp += v;
+  return temp; 
+}
+
+// Subtraktionsoperator
+Vec2 const operator -( Vec2 const & u, Vec2 const & v)
+{
+  Vec2 temp(u);
+  temp -= v;
+  return temp; 
+}
