@@ -33,5 +33,13 @@ Vec2 & Vec2::operator *=( float s)
   x_ *= s;
   y_ *= s;
   return *this;
+}
 
+// Divisionsoperator
+
+Vec2 & Vec2::operator /=( float s)
+{
+  x_ /= s;
+  y_ /= s;
+  return *this;
 }

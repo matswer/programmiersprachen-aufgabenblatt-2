@@ -37,13 +37,27 @@ TEST_CASE ("Multiplikations Operator", "[vec2.hpp]")
 float multifloat1 = 2.0f;
 Vec2 full(5.8, 8.0);
 full *= multifloat1;
-REQUIRE(Approx(full.x_) == 10.6);
+REQUIRE(Approx(full.x_) == 11.6);
 REQUIRE(Approx(full.y_) == 16.0);
 float multifloat2 = 0.0f;
 Vec2 full1(5.8, 8.0);
 full1 *= multifloat2;
-REQUIRE(Approx(full.x_) == 0.0);
-REQUIRE(Approx(full.y_) == 0.0);
+REQUIRE(Approx(full1.x_) == 0.0);
+REQUIRE(Approx(full1.y_) == 0.0);
+}
+
+TEST_CASE ("Divisions Operator", "[vec2.hpp]")
+{ 
+float multifloat1 = 2.0f;
+Vec2 full(5.4, 8.0);
+full /= multifloat1;
+REQUIRE(Approx(full.x_) == 2.7);
+REQUIRE(Approx(full.y_) == 4.0);
+float multifloat2 = 5.8f;
+Vec2 full1(5.8, 5.8);
+full1 /= multifloat2;
+REQUIRE(Approx(full1.x_) == 1.0);
+REQUIRE(Approx(full1.y_) == 1.0);
 }
 
 int main(int argc, char *argv[])
