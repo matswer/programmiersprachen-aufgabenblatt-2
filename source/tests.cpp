@@ -81,7 +81,34 @@ vector_e = vector_v - vector_u;
 REQUIRE(Approx(vector_e.x_) == -3.8);
 REQUIRE(Approx(vector_e.y_) == -4.0);
 }
+TEST_CASE ("Multiplikation float", "[vec2.hpp]")
+{ 
+float multifloat1 = 2.0f;
+Vec2 vector_v (2.0, 4.0);
+Vec2 vector_e(0.0, 0.0);
+vector_e = vector_v * multifloat1;
+REQUIRE(Approx(vector_e.x_) == 4.0);
+REQUIRE(Approx(vector_e.y_) == 8.0);
+}
 
+TEST_CASE ("Division float", "[vec2.hpp]")
+{ 
+float multifloat1 = 2.0f;
+Vec2 vector_v (20.0, 48.0);
+Vec2 vector_e(0.0, 0.0);
+vector_e = vector_v / multifloat1;
+REQUIRE(Approx(vector_e.x_) == 10.0);
+REQUIRE(Approx(vector_e.y_) == 24.0);
+}
+TEST_CASE ("Multiplikation float2", "[vec2.hpp]")
+{ 
+float multifloat1 = 2.0f;
+Vec2 vector_v (2.0, 4.0);
+Vec2 vector_e(0.0, 0.0);
+vector_e = multifloat1 * vector_v;
+REQUIRE(Approx(vector_e.x_) == 4.0);
+REQUIRE(Approx(vector_e.y_) == 8.0);
+}
 int main(int argc, char *argv[])
 {
   return Catch::Session().run(argc, argv);

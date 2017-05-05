@@ -59,3 +59,27 @@ Vec2 const operator -( Vec2 const & u, Vec2 const & v)
   temp -= v;
   return temp; 
 }
+
+// Multiplikationsoperator float
+Vec2 const operator *( Vec2 const & v, float s)
+{
+  Vec2 temp(v);
+  temp *= s;
+  return temp; 
+}
+
+// Divisionsoperator float
+Vec2 const operator /( Vec2 const & v, float s)
+{
+  Vec2 temp(v);
+  temp /= s;
+  return temp; 
+}
+
+// Multiplikationsoperator float2
+Vec2 const operator *(float s, Vec2 const & v)
+{
+  Vec2 temp(v);
+  temp *= s;
+  return temp; 
+}
