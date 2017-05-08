@@ -1,8 +1,9 @@
 #include "vec2.hpp"
+#include "mat2.hpp"
 
 Vec2::Vec2()       // Standardkonstruktor
   : x_(0.0), y_(0.0) // Memberinitialisierungsliste
-  {}
+{}
 
 Vec2::Vec2(float x, float y)
   : x_(x), y_(y)

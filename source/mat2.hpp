@@ -1,19 +1,22 @@
 #ifndef MAT2_HPP
 #define MAT2_HPP
-// Vec2 class definition
+// Mat2 class definition
 struct Mat2
  {
   Mat2 ();
   Mat2 (double, double, double, double);
-  double matrix [2][2];
-  double x1;
-  double x2;
-  double y1;
-  double y2;
-
-  float det () const ;
+  double a_;
+  double b_;
+  double c_;
+  double d_;
+  float det() const;
 
   };
+
 Mat2 operator *( Mat2 const & m1 , Mat2 const & m2 );
+
+Mat2 inverse ( Mat2 const & m);
+Mat2 transpose ( Mat2 const & m);
+Mat2 make_rotation_mat2 ( float phi );
 
 # endif // MAT2_HPP

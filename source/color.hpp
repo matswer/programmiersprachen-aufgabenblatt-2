@@ -3,9 +3,9 @@
 // color class definition
 struct Color
 {
-    Color();  
-    Color(float [3]);
-    float farbe [3];
+    Color();
+    Color(float);
+    Color(float, float, float);
     float r_;
     float g_;
     float b_;

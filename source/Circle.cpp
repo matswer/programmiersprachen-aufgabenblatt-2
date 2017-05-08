@@ -6,7 +6,7 @@
 
 using namespace std; 
 
-cont double PI = 3.14159; 
+const double PI = 3.14159; 
              
              //default constructor
              //precondition: none
@@ -28,6 +28,7 @@ cont double PI = 3.14159;
                         }
                         else 
                           radius =r; 
+                       
              }
              
              //Destructor
@@ -38,22 +39,6 @@ cont double PI = 3.14159;
                    cout << "A circle died"<<endl; 
                    }
              
-             //Sets Radius
-             //precondition: an object exists with a valid radius. 
-             //postcondition: the radius is changed to r. 
-             void Circle::Circle(double r) 
-             {
-              //invalid input (r <= 0) is checked for in the calling function. 
-                          radius =r; 
-             }
-             
-             //Gets Radius
-             //precondition: an object exists with a valid radius. 
-             //postcondition: the radius is changed to r. 
-             double Circle::Circle()
-             {
-                    return radius; 
-                    }
                     
              //Calculate the area
              //precondition: an object exists with a valid radius. 
