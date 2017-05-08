@@ -17,10 +17,10 @@ return a_ * d_ - b_ * c_;
 
 Mat2 & Mat2::operator *= (Mat2 const & m)
 {
-    a_ = m.a_ * a_ + b_ * m.c_;
-    b_ = m.a_ * b_ + b_ * m.d_;
-    c_ = m.c_ * a_ + d_ * m.c_;
-    d_ = m.c_ * b_ + d_ * m.d_;
+    a_ = a_ * m.a_ + b_ * m.c_;
+    b_ = a_ * m.b_ + b_ * m.d_;
+    c_ = c_ * m.a_ + d_ * m.c_;
+    d_ = c_ * m.b_ + d_ * m.d_;
     return *this;
 }
 
