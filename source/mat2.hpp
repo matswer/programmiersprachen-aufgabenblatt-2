@@ -10,7 +10,7 @@ struct Mat2
   double c_;
   double d_;
   float det() const;
-
+  Mat2 & operator *=( Mat2 const & m);
   };
 
 Mat2 operator *( Mat2 const & m1 , Mat2 const & m2 );

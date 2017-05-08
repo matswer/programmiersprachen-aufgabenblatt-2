@@ -15,6 +15,15 @@ float Mat2::det() const
 return a_ * d_ - b_ * c_; 
 }
 
+Mat2 & Mat2::operator *= (Mat2 const & m)
+{
+    a_ *= m.a_;
+    b_ *= m.b_;
+    c_ *= m.c_;
+    d_ *= m.d_;
+    return *this;
+}
+
 Mat2 operator *( Mat2 const & m1 , Mat2 const & m2 )
 {
 Mat2 m3;
