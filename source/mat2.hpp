@@ -1,7 +1,7 @@
 #ifndef MAT2_HPP
 #define MAT2_HPP
 
-#include "Vec2.hpp"
+#include "vec2.hpp"
 
 // Mat2 class definition
 struct Mat2

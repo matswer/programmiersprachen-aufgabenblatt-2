@@ -150,6 +150,8 @@ REQUIRE(Approx(m3.c_) == 77.0);
 REQUIRE(Approx(m3.d_) == 71.0);
 }
 
+//Aufgabe 2.5
+
 TEST_CASE ("=* Multiplikation", "[mat2.hpp]")
 { 
 Mat2 m1 {11.0, 5.0, 7.0, 10.0};
@@ -159,6 +161,18 @@ REQUIRE(Approx(m1.a_) == 121.0);
 REQUIRE(Approx(m1.b_) == 58.0);
 REQUIRE(Approx(m1.c_) == 77.0);
 REQUIRE(Approx(m1.d_) == 71.0);
+}
+
+//Aufgabe 2.6
+
+TEST_CASE ("Matrix Vektor Multiplikation", "[mat2.hpp]")
+{ 
+Mat2 m1 {11.0, 5.0, 7.0, 10.0};
+Vec2 v2 {11.0, 3.0};
+Vec2 v1 {0, 0};
+v1 = m1 * v2;
+REQUIRE(Approx(v1.x_) == 136.0);
+REQUIRE(Approx(v1.y_) == 107.0);
 }
 
 //Aufgabe 2.7
