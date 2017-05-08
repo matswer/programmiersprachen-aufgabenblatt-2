@@ -148,10 +148,20 @@ REQUIRE(Approx(m3.a_) == 121.0);
 REQUIRE(Approx(m3.b_) == 58.0);
 REQUIRE(Approx(m3.c_) == 77.0);
 REQUIRE(Approx(m3.d_) == 71.0);
-
 }
 
-//Aufgabe 2.5
+TEST_CASE ("Matrix Multiplikation", "[mat2.hpp]")
+{ 
+Mat2 m1 {11.0, 5.0, 7.0, 10.0};
+Mat2 m2 {11.0, 3.0, 0.0, 5.0};
+m1 = m1 * m2;
+REQUIRE(Approx(m3.a_) == 121.0);
+REQUIRE(Approx(m3.b_) == 58.0);
+REQUIRE(Approx(m3.c_) == 77.0);
+REQUIRE(Approx(m3.d_) == 71.0);
+}
+
+//Aufgabe 2.7
 TEST_CASE ("Farbe", "[color.hpp]")
 { 
 Color leer {};
