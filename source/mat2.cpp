@@ -41,11 +41,11 @@ Vec2 operator * ( Vec2 const & v, Mat2 const & m)
     return v1;
 }
 
-Vec2 operator * ( Mat2 const & m, Vec2 const & v)
+Vec2 operator * ( Mat2 const & m1, Vec2 const & v)
 {
-    Vec2 v1;
-    v1.x_ = m.a_ * v.x_ + m.c_ * v.y_;
-    v1.y_ = m.b_ * v.x_ + m.d_ * v.y_;
-    return v1;
+    Vec2 v2;
+    v2.x_ = v.x_ * m1.a_ + v.y_ * m1.c_;
+    v2.y_ = v.x_ * m1.b_ + v.y_ * m1.d_;
+    return v2;
 }
 

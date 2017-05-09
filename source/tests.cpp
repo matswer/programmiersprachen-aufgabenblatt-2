@@ -167,12 +167,23 @@ REQUIRE(Approx(m1.d_) == 71.0);
 
 TEST_CASE ("Matrix Vektor Multiplikation", "[mat2.hpp]")
 { 
-Mat2 m1 {11.0, 5.0, 7.0, 10.0};
+Mat2 m {11.0, 5.0, 7.0, 10.0};
 Vec2 v2 {11.0, 3.0};
 Vec2 v1 {0, 0};
-v1 = m1 * v2;
+v1 = m * v2;
 REQUIRE(Approx(v1.x_) == 136.0);
 REQUIRE(Approx(v1.y_) == 107.0);
+}
+
+TEST_CASE ("Vektor Matrix Multiplikation", "[mat2.hpp]")
+{ 
+Vec2 v4 {11.0, 3.0};
+Vec2 v3 {0, 0};
+Mat2 m1 {11.0, 5.0, 7.0, 10.0};
+v3 = v4 * m1;
+// Umgekehrte Reihenfolge beachten!!
+//REQUIRE(Approx(v3.x_) == 142.0);
+//REQUIRE(Approx(v3.y_) == 85.0);
 }
 
 //Aufgabe 2.7
