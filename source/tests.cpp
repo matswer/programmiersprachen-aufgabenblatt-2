@@ -3,6 +3,7 @@
 #include "vec2.hpp"
 #include "mat2.hpp"
 #include "color.hpp"
+#include "Circle.hpp"
 
 
 //Aufgabe 2.3
@@ -185,25 +186,6 @@ REQUIRE(Approx(v2.x_) == 5.0);
 REQUIRE(Approx(v2.y_) == 11.0);
 }
 
-//Aufgabe 2.7
-TEST_CASE ("Farbe", "[color.hpp]")
-{ 
-Color leer {};
-Color black {0.0};
-Color red {1.0, 0.0, 0.0};
-Color over {230.0, 100.0, 100.0};
-REQUIRE(Approx(black.r_) == 0.0);
-REQUIRE(Approx(black.g_) == 0.0);
-REQUIRE(Approx(black.b_) == 0.0);
-REQUIRE(Approx(red.r_) == 1.0);
-REQUIRE(Approx(red.g_) == 0.0);
-REQUIRE(Approx(red.b_) == 0.0);
-REQUIRE(Approx(over.r_) == 0.9019607902);
-REQUIRE(Approx(over.g_) == 0.3921568692);
-REQUIRE(Approx(over.b_) == 0.3921568692);
-
-}
-
 TEST_CASE ("INVERSE", "[mat2.hpp]")
 { 
 Mat2 matrix {1.0, 2.0, 2.0, 3.0};
@@ -235,7 +217,44 @@ REQUIRE(Approx(rotation.d_) == 0.0);
 
 }
 
+//Aufgabe 2.7
+TEST_CASE ("Farbe", "[color.hpp]")
+{ 
+Color leer {};
+Color black {0.0};
+Color red {1.0, 0.0, 0.0};
+Color over {230.0, 100.0, 100.0};
+REQUIRE(Approx(black.r_) == 0.0);
+REQUIRE(Approx(black.g_) == 0.0);
+REQUIRE(Approx(black.b_) == 0.0);
+REQUIRE(Approx(red.r_) == 1.0);
+REQUIRE(Approx(red.g_) == 0.0);
+REQUIRE(Approx(red.b_) == 0.0);
+REQUIRE(Approx(over.r_) == 0.9019607902);
+REQUIRE(Approx(over.g_) == 0.3921568692);
+REQUIRE(Approx(over.b_) == 0.3921568692);
+
+}
+
+//Aufgabe 2.8 
+
+TEST_CASE ("Circle Fläche", "[Circle.hpp]")
+{ 
+Circle r (5.0);
+double flaeche;
+flaeche = r.area();
+REQUIRE(Approx(flaeche) == 78.53981633);
+}
+TEST_CASE ("Circle 2 Fläche leerer Radius", "[Circle.hpp]")
+{ 
+Circle r1 (0.0);
+double flaeche1;
+flaeche1 = r1.area();
+REQUIRE(Approx(flaeche1) == 3.1415926535);
+}
+
 int main(int argc, char *argv[])
+
 {
   return Catch::Session().run(argc, argv);
 }
