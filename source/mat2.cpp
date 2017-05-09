@@ -68,3 +68,14 @@ Mat2 inverse ( Mat2 const & m)
     }
 }
 
+Mat2 transpose (Mat2 const & m)
+{
+    Mat2 mt;
+    mt.a_ = m.a_;
+    mt.b_ = m.c_;
+    mt.c_ = m.b_;
+    mt.d_ = m.d_;
+    return mt;
+}
+
+
