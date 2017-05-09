@@ -207,13 +207,21 @@ REQUIRE(Approx(over.b_) == 0.3921568692);
 TEST_CASE ("INVERSE", "[mat2.hpp]")
 { 
 Mat2 matrix {1.0, 2.0, 2.0, 3.0};
-//double inv1 [2][2];
-//inv1 = inverse(matrix).a_;
 REQUIRE(Approx(inverse(matrix).a_) == -3.0);
 REQUIRE(Approx(inverse(matrix).b_) == 2.0);
 REQUIRE(Approx(inverse(matrix).c_) == 2.0);
 REQUIRE(Approx(inverse(matrix).d_) == -1.0);
+}
 
+TEST_CASE ("Transpose", "[mat2.hpp]")
+{ 
+Mat2 m {5.0, 2.0, 9.0, 10};
+Mat2 trans {0.0, 0.0, 0.0, 0.0};
+trans = transpose(m);
+REQUIRE(Approx(trans.a_) == 5.0);
+REQUIRE(Approx(trans.b_) == 9.0);
+REQUIRE(Approx(trans.c_) == 2.0);
+REQUIRE(Approx(trans.d_) == 10.0);
 
 }
 
