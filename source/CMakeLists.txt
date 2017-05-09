@@ -21,7 +21,6 @@ add_executable(tests
    vec2.cpp
    mat2.cpp
    Circle.cpp
-   rectangle.cpp
    color.cpp
    glew.c
    window.cpp
