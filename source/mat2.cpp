@@ -49,3 +49,13 @@ Vec2 operator * ( Mat2 const & m1, Vec2 const & v)
     return v2;
 }
 
+Mat2 inverse ( Mat2 const & m)
+{
+    Mat2 m2;
+    m2.a_ = (- m.b_ * m2.c_ + 1.0) / m.a_;
+    m2.b_ = - (m.b_ * m2.d_) / m.a_;
+    m2.c_ = - (m.c_ * m2.a_) / m.d_;
+    m2.d_ = (- m.c_ * m2.b_ + 1.0)/ m.d_;
+    return m2;
+}
+
