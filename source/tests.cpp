@@ -4,6 +4,7 @@
 #include "mat2.hpp"
 #include "color.hpp"
 #include "Circle.hpp"
+#include "Rectangle.hpp"
 
 
 //Aufgabe 2.3
@@ -251,6 +252,13 @@ Circle r1 (0.0);
 double flaeche1;
 flaeche1 = r1.area();
 REQUIRE(Approx(flaeche1) == 3.1415926535);
+}
+TEST_CASE ("Circle 2 Umfang", "[Circle.hpp]")
+{ 
+Circle r1 (4.0);
+double umfang;
+umfang = r1.circum();
+REQUIRE(Approx(umfang) == 25.13274122);
 }
 
 int main(int argc, char *argv[])
