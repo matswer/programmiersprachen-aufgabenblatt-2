@@ -1,6 +1,9 @@
 #ifndef MAT2_HPP
 #define MAT2_HPP
 
+#include <math.h>
+#define PI 3.14159265
+
 #include "vec2.hpp"
 
 

@@ -80,13 +80,11 @@ Mat2 transpose (Mat2 const & m)
 
 Mat2 make_rotation_mat2 (float phi)
 {
-    double sin;
-    double cos;
     Mat2 mr;
-    mr.a_ = cos * phi;
-    mr.b_ = -sin * phi;
-    mr.c_ = sin * phi;
-    mr.d_ = cos * phi;
+    mr.a_ = cos(phi);
+    mr.b_ = -sin(phi);
+    mr.c_ = sin(phi);
+    mr.d_ = cos(phi);
     return mr;
 }
 

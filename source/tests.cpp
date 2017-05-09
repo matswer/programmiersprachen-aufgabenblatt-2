@@ -224,6 +224,16 @@ REQUIRE(Approx(trans.c_) == 2.0);
 REQUIRE(Approx(trans.d_) == 10.0);
 
 }
+TEST_CASE ("Rotationsmatrix", "[mat2.hpp]")
+{ 
+Mat2 rotation;
+rotation = make_rotation_mat2(PI/2);
+REQUIRE(Approx(rotation.a_) == 0.0);
+REQUIRE(Approx(rotation.b_) == -1.0);
+REQUIRE(Approx(rotation.c_) == 1.0);
+REQUIRE(Approx(rotation.d_) == 0.0);
+
+}
 
 int main(int argc, char *argv[])
 {
