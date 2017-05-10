@@ -22,6 +22,6 @@ class Rectangle
              Vec2 const& min() const { return min_; }
              Vec2 const& max() const { return max_; } 
              float area();         //Konstruktor Fläche
-             float circum();       //Konstruktor Umfang
+             float circumference();       //Konstruktor Umfang
             
 };

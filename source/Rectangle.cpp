@@ -39,7 +39,7 @@ using namespace std;
                     return ((max_.x_ - min_.x_) * (max_.y_ - min_.y_));
                     }
              
-             float Rectangle::circum()
+             float Rectangle::circumference()
               {
                     return (2 * (max_.x_ - min_.x_) + 2 * (max_.y_ - min_.y_)); 
                     }

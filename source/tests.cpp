@@ -260,13 +260,7 @@ double flaeche1;
 flaeche1 = r1.area();
 REQUIRE(Approx(flaeche1) == 3.1415926535);
 }
-TEST_CASE ("Circle 2 Umfang", "[Circle.hpp]")
-{ 
-Circle r1 (4.0);
-double umfang;
-umfang = r1.circum();
-REQUIRE(Approx(umfang) == 25.13274122);
-}
+
 //Rechteck
 TEST_CASE("Rechteck", "[constructor]")
 {
@@ -282,6 +276,21 @@ TEST_CASE ("Rechteck Fläche", "[Rectangle.hpp]")
 Rectangle rechteck{Vec2(0.0, 0.0), Vec2(2.0, 9.0)};
 REQUIRE(18.0 == rechteck.area());
 }
+//Aufgabe 2.9
+TEST_CASE ("Rechteck Umfang", "[Rectangle.hpp]")
+{ 
+Rectangle rechteck{Vec2(0.0, 0.0), Vec2(2.0, 9.0)};
+REQUIRE(22.0 == rechteck.circumference());
+}
+TEST_CASE ("Circle 2 Umfang", "[Circle.hpp]")
+{ 
+Circle r1 (4.0);
+double umfang;
+umfang = r1.circumference();
+REQUIRE(Approx(umfang) == 25.13274122);
+}
+
+
 
 
 

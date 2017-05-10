@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Circle.hpp"
+#include <Color.hpp>
 using namespace std; 
 
 const double PI = 3.14159; 
@@ -27,7 +28,7 @@ const double PI = 3.14159;
                     return (PI * (radius*radius));
                     }
              
-             double Circle::circum()
+             double Circle::circumference()
               {
                     return (2 * PI * radius); 
                     }
