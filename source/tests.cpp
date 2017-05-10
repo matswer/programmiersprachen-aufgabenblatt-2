@@ -238,7 +238,14 @@ REQUIRE(Approx(over.b_) == 0.3921568692);
 }
 
 //Aufgabe 2.8 
-
+//Kreis
+TEST_CASE ("Circle Übergabe", "[Circle.hpp]")
+{ 
+Circle r (5.0);
+double flaeche;
+flaeche = r.area();
+REQUIRE(Approx(flaeche) == 78.53981633);
+}
 TEST_CASE ("Circle Fläche", "[Circle.hpp]")
 { 
 Circle r (5.0);
@@ -260,6 +267,30 @@ double umfang;
 umfang = r1.circum();
 REQUIRE(Approx(umfang) == 25.13274122);
 }
+//Rechteck
+TEST_CASE("Rechteck", "[constructor]")
+{
+  Rectangle rechteck{Vec2(0.0, 0.0), Vec2(2.0, 9.0)};
+  REQUIRE(0.0 == rechteck.min().x_);
+  REQUIRE(0.0 == rechteck.min().y_);
+  REQUIRE(2.0 == rechteck.max().x_);
+  REQUIRE(9.0 == rechteck.max().y_);
+} 
+
+TEST_CASE ("Rechteck Fläche", "[Rectangle.hpp]")
+{ 
+Rectangle rechteck{Vec2(0.0, 0.0), Vec2(2.0, 9.0)};
+REQUIRE(18.0 == rechteck.area());
+}
+
+
+
+
+
+
+
+
+
 
 int main(int argc, char *argv[])
 
